@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewisekay Mobile Affordable Data Portal</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --border: #334155;
+            --success: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            padding: 20px 15px;
+        }
+
+        header {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .status-badge {
+            background-color: rgba(34, 197, 94, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .hero-text h1 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .hero-text p {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .network-btn {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .network-btn.active {
+            border-color: var(--accent);
+            background-color: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 12px 8px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-item p {
+            font-size: 11px;
+            color: var(--text-sub);
+            margin-top: 4px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 30px;
+            color: var(--text-sub);
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <div class="brand-logo">B</div>
+            <div>
+                <div class="brand-title">Bewisekay Mobile</div>
+                <div style="font-size: 11px; color: var(--text-sub);">Affordable Data Portal</div>
+            </div>
+        </div>
+        <div class="status-badge">● API Online</div>
+    </header>
+
+    <div class="container">
+        <div class="hero-text">
+            <h1>Instant Mobile Data Top-Up</h1>
+            <p>Fast, reliable automated data delivery across all major networks</p>
+        </div>
+
+        <form id="orderForm" onsubmit="handleOrder(event)">
+            <div class="form-group">
+                <label>Select Network</label>
+                <div class="network-grid">
+                    <button type="button" class="network-btn active" onclick="selectNetwork(this, 'MTN')">MTN</button>
+                    <button type="button" class="network-btn" onclick="selectNetwork(this, 'Telecel')">Telecel</button>
+                    <button type="button" class="network-btn" onclick="selectNetwork(this, 'AT Ghana')">AT Ghana</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Recipient Phone Number</label>
+                <input type="tel" id="phone" placeholder="e.g., 024XXXXXXX" required pattern="[0-9]{10}">
+            </div>
+
+            <div class="form-group">
+                <label for="package">Data Package</label>
+                <select id="package" required>
+                    <option value="">-- Choose Data Volume --</option>
+                    <option value="1GB">1 GB Non-Expiry Data</option>
+                    <option value="2GB">2 GB Non-Expiry Data</option>
+                    <option value="5GB">5 GB Non-Expiry Data</option>
+                    <option value="10GB">10 GB Non-Expiry Data</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Place Automated Order</button>
+        </form>
+
+        <div class="features">
+            <div class="feature-item">
+                <strong>⚡ Instant</strong>
+                <p>Automated fulfillment</p>
+            </div>
+            <div class="feature-item">
+                <strong>🔒 Secure</strong>
+                <p>API Direct Link</p>
+            </div>
+            <div class="feature-item">
+                <strong>🕒 24/7</strong>
+                <p>Always active</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Bewisekay Mobile Affordable Data. All rights reserved.
+    </footer>
+
+    <script>
+        let selectedNetwork = 'MTN';
+
+        function selectNetwork(button, network) {
+            document.querySelectorAll('.network-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            selectedNetwork = network;
+        }
+
+        function handleOrder(e) {
+            e.preventDefault();
+            const phone = document.getElementById('phone').value;
+            const pkg = document.getElementById('package').value;
+            alert(`Order Received!\n\nNetwork: ${selectedNetwork}\nRecipient: ${phone}\nPackage: ${pkg}\n\nSystem will process via API key upon connection.`);
+        }
+    </script>
+</body>
+</html>
